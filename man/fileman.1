@@ -1,0 +1,56 @@
+.\" Modified from man(1) of FreeBSD, the NetBSD mdoc.template, and mdoc.samples.
+.\" See Also:
+.\"   man mdoc.samples   for a complete listing of options
+.\"   man mdoc         for the short list of editing options
+.\"   /usr/share/misc/mdoc.template
+.Dd February 14, 2025
+.Dt fileman 1
+.Os GNU/Linux
+.Sh NAME
+.Nm fileman
+.Nd A terminal-based file manager with a three-pane navigation interface.
+.Sh SYNOPSIS
+.Nm
+.Op FILE_NAME/DIRECTORY_NAME
+.Op Fl h
+.Sh DESCRIPTION
+The
+.Nm
+command is a Bash-based file manager that displays three panels in your terminal:
+.Pp
+The three panes are:
+.Pp
+.Bl -tag -width 10 -indent
+.It parent
+Displays the contents of the parent directory of the current working directory. The current folder is highlighted.
+.It current
+Lists the files and directories in the current working directory.
+.It preview
+Provides a preview of the selected entry. If a directory is selected, its contents are displayed. If a text file is selected, a preview is shown with line wrapping. For non-text files, a placeholder message is displayed.
+.El
+.Pp
+Keybindings include:
+.Pp
+.Bl -tag -width 16 -indent
+.It Up/Down Arrows
+Move the selection within the active pane.
+.It Left Arrow
+Navigate to the parent directory.
+.It Right Arrow
+Enter the selected directory.
+.It 5/6 Keys
+Scroll the content preview.
+.El
+.Pp
+Pressing \fBq\fR exits the file manager, and pressing \fBs\fR opens a configuration popup to sort directories based on rules defined in configuration files located in \fB~/.config/fileman\fR.
+.Sh FILES
+.Bl -tag -width 40 -compact
+.It Pa ~/.config/fileman
+Directory containing configuration files used to define file-sorting rules.
+.El
+.Sh SEE ALSO
+.Xr bash 1 ,
+.Xr ls 1 ,
+.Xr man 1
+.Sh AUTHOR
+Written by Hrishabh Mittal.
