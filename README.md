@@ -4,10 +4,7 @@ fileman is a simple Bash-based file management tool that helps you perform commo
 
 ## Features
 - List files and directories
-- Copy, move, and delete files
-- Search for files
-- Display file information
-- Batch rename files
+- Sort files into folders according to their extension
 
 ## Installation
 To install fileman, run:
