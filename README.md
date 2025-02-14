@@ -6,6 +6,16 @@ fileman is a simple Bash-based file management tool that helps you perform commo
 - List files and directories
 - Sort files into folders according to their extension
 
+## Dependencies
+- tput
+- file
+- dirname
+- filename
+- GNU Coreutils (printf,grep,seq)
+
+please make sure these are installed on your device
+
+
 ## Installation
 To install fileman, run:
 
